@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Josh Lindsay</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Josh Lindsay</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 30 Jan 2018 11:57:44 -0800</lastBuildDate>
+    
+	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Words With Fiends</title>
+      <link>/projects/words-with-fire/</link>
+      <pubDate>Tue, 30 Jan 2018 11:57:44 -0800</pubDate>
+      
+      <guid>/projects/words-with-fire/</guid>
+      <description>Link: https://wwfiends.herokuapp.com/ Source: https://github.com/jlindsay90/words-with-fire</description>
+    </item>
+    
+    <item>
+      <title>Find My Sisig</title>
+      <link>/projects/find-my-sisig/</link>
+      <pubDate>Tue, 30 Jan 2018 11:35:49 -0800</pubDate>
+      
+      <guid>/projects/find-my-sisig/</guid>
+      <description>Find that burrito! 🌯
+The Senor Sisig website is quite bloated at the
+Created a simple node js app that scrapes the sisig website of choice
+Link: https://find-my-sisig.herokuapp.com/ Source: https://gitlab.com/jlindsay90/find-my-sisig</description>
+    </item>
+    
+    <item>
+      <title>HackerRank to Git</title>
+      <link>/projects/hackerrank-to-git/</link>
+      <pubDate>Tue, 26 Dec 2017 14:06:29 -0800</pubDate>
+      
+      <guid>/projects/hackerrank-to-git/</guid>
+      <description>Will add more here. Might even just pull from the README.md from each project 🤔
+This one in particular is hosted at this Github Repo</description>
+    </item>
+    
+  </channel>
+</rss>
