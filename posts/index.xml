@@ -6,10 +6,38 @@
     <description>Recent content in Posts on Josh Lindsay</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 26 Dec 2017 13:57:43 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mastodon</title>
+      <link>/posts/mastodon/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/mastodon/</guid>
+      <description>Update! I really (well &amp;hellip; not much at all) tried to keep this a living document. That did not last long. It is much easier to post snippets of things as time goes on. Be sure to check out my Mastodon.technology profile!
+https://mastodon.technology/@j000sh</description>
+    </item>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Revisit WWF Project</title>
+      <link>/posts/revisit-wwf-project/</link>
+      <pubDate>Sat, 11 Apr 2020 13:52:39 -0700</pubDate>
+      
+      <guid>/posts/revisit-wwf-project/</guid>
+      <description>I have a lot of free time on my (washed) hands whilst staying inside due to COVID-19. I noticed my boyfriend got back into playing the popular Zynga game Words with Friends.
+Years ago while on my commute to work, I started dabbling with mitmproxy and monitoring the network traffic and API, but never got to the meat of solving the game.
+Thinking of looking back into it now, perhaps as a sequence of interview-type problems.</description>
+    </item>
     
+    <item>
+      <title>Dev Environment Setup</title>
+      <link>/posts/shell-setup/</link>
+      <pubDate>Thu, 09 Apr 2020 14:20:00 -0800</pubDate>
+      
+      <guid>/posts/shell-setup/</guid>
+      <description>Finally getting around to setting up my dotfiles and really learning how to use vim, zsh, stow, and all the tools. Going to jot down some notes for reference.
+Also, I must shamefully point out that I wrote this in VS Code with the really handy markdown viewer! Maybe this could be a good first dive into editing with emacs! &amp;hellip; soon™️
+Zsh Not sure I have any concrete understanding yet.</description>
+    </item>
     
     <item>
       <title>First Post</title>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Josh Lindsay">
+    <meta name="description" content="Josh&#39;s personal website">
+    <meta name="keywords" content="blog,dev,developer,personal,engineer">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dev Environment Setup"/>
+<meta name="twitter:description" content="Finally getting around to setting up my dotfiles and really learning how to use vim, zsh, stow, and all the tools. Going to jot down some notes for reference.
+Also, I must shamefully point out that I wrote this in VS Code with the really handy markdown viewer! Maybe this could be a good first dive into editing with emacs! &hellip; soon™️
+Zsh Not sure I have any concrete understanding yet."/>
+
+    <meta property="og:title" content="Dev Environment Setup" />
+<meta property="og:description" content="Finally getting around to setting up my dotfiles and really learning how to use vim, zsh, stow, and all the tools. Going to jot down some notes for reference.
+Also, I must shamefully point out that I wrote this in VS Code with the really handy markdown viewer! Maybe this could be a good first dive into editing with emacs! &hellip; soon™️
+Zsh Not sure I have any concrete understanding yet." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/shell-setup/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-04-09T14:20:00-08:00" />
+<meta property="article:modified_time" content="2020-04-09T14:20:00-08:00" />
+
+
+
+    
+      <base href="/posts/shell-setup/">
+    
+    <title>
+  Dev Environment Setup · Josh Lindsay
+</title>
+
+    
+      <link rel="canonical" href="/posts/shell-setup/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.104.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-dark">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Josh Lindsay
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/about/">About</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/posts/">Posts</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/projects/">Projects</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="/about/resume/">Resume</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Dev Environment Setup</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-04-09T14:20:00-08:00'>
+                April 9, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Finally getting around to setting up <a href="https://github.com/josh-dot-com/dotfiles">my dotfiles</a> and really learning how to use vim, zsh, stow, and all the tools. Going to jot down some notes for reference.</p>
+<p>Also, I must shamefully point out that I wrote this in VS Code with the really handy markdown viewer! Maybe this could be a good first dive into editing with emacs! &hellip; soon™️</p>
+<h3 id="zsh">Zsh</h3>
+<p>Not sure I have any concrete understanding yet. Just consumed some learnings about different popular options and stuff from a <a href="https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded">comparison of ZSH frameworks</a> and /r/unixporn mod <a href="https://github.com/xero/dotfiles/tree/master/zsh">xero</a>. I settled on <a href="https://github.com/zdharma/zinit">zinit</a> (formerly zplugin) and will try to learn more about how plugin managers work.</p>
+<h3 id="git-and-ssh-configs">Git and SSH configs</h3>
+<p>Finally got around to setting up a USABLE <code>.gitconfig</code> <code>.ssh/config</code>. I always want to have multiple identity files (for personal, work, and student use), but never spent time looking into how to go about it. You can find them in <a href="https://github.com/josh-dot-com/dotfiles">my dotfiles</a> repo.</p>
+<h3 id="stow">Stow</h3>
+<p>Seeing that GNU stow seems recommended by my buddy Girdler and xero, so I figure I&rsquo;ll give it a shot.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>stow -d Repos/dotfiles -t . git ssh zsh
+</span></span></code></pre></div><p><a href="https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html">Straightforward example</a> of how to use stow</p>
+<h3 id="vim">Vim</h3>
+<p>Considering paying for a 6-month <a href="https://vim-adventures.com">Vim Adventures</a> license</p>
+<p>Reddit also mentions the following:</p>
+<ul>
+<li><a href="https://github.com/jmoon018/PacVim">PacVim</a></li>
+<li><a href="https://vimgolf.com/">VimGolf</a></li>
+<li><a href="https://thoughtbot.com/upcase/onramp-to-vim">Onramp to Vim</a> if you like videos</li>
+<li><code>vimtutor</code>, of course</li>
+</ul>
+<h3 id="emacs">Emacs</h3>
+<p>Also, Girdler has been a strong advocate for <a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a> and helped me get it set up on my machines.</p>
+<h3 id="screen">Screen</h3>
+<p>TBD</p>
+<h3 id="tmux">Tmux</h3>
+<p>TBD</p>
+<h3 id="macos-software">MacOS software</h3>
+<p>Much like everything there a plethora of terminal options. I don&rsquo;t have as much experience to weigh the pros and cons, but here are some options.</p>
+<h4 id="terminal-emulators">Terminal Emulators</h4>
+<ul>
+<li><a href="https://github.com/alacritty/alacritty">Alacritty</a> - cross-platform, GPU-accelerated terminal emulator</li>
+<li><a href="https://iterm2.com/">iTerm2</a> - tabs and windows?</li>
+</ul>
+<h4 id="text-editors--operating-systems">Text Editors / Operating Systems</h4>
+<ul>
+<li><a href="https://www.spacemacs.org/">spacemacs</a> - supposedly emacs AND vim!</li>
+<li><a href="https://neovim.io/">NeoVim</a></li>
+<li><a href="https://code.visualstudio.com/">VS Code</a></li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2022
+         Josh Lindsay 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+  </body>
+
+</html>
